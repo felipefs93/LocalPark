@@ -20,6 +20,7 @@
 		9AD3470C1D31F5DA008BD0C0 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3470B1D31F5DA008BD0C0 /* CustomButton.swift */; };
 		9AD3470E1D328622008BD0C0 /* Parking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3470D1D328622008BD0C0 /* Parking.swift */; };
 		9AD347101D328691008BD0C0 /* Sector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3470F1D328691008BD0C0 /* Sector.swift */; };
+		9AD347121D3286D2008BD0C0 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD347111D3286D2008BD0C0 /* Ticket.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		9AD3470B1D31F5DA008BD0C0 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		9AD3470D1D328622008BD0C0 /* Parking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parking.swift; sourceTree = "<group>"; };
 		9AD3470F1D328691008BD0C0 /* Sector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sector.swift; sourceTree = "<group>"; };
+		9AD347111D3286D2008BD0C0 /* Ticket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			children = (
 				9AD3470D1D328622008BD0C0 /* Parking.swift */,
 				9AD3470F1D328691008BD0C0 /* Sector.swift */,
+				9AD347111D3286D2008BD0C0 /* Ticket.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AD347121D3286D2008BD0C0 /* Ticket.swift in Sources */,
 				9AD346EE1D29F45D008BD0C0 /* QRReaderVC.swift in Sources */,
 				9AD347101D328691008BD0C0 /* Sector.swift in Sources */,
 				9AD3470A1D31E7FD008BD0C0 /* ParkingLotCell.swift in Sources */,
