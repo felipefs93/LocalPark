@@ -8,9 +8,15 @@
 
 import UIKit
 
-class ParkingLotSelectorVC: UIViewController {
+class ParkingLotSelectorVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     var text:String!
+    
+    let lots = ["1","2","3","4","5","6"]
+    let image = [true,false,false,false,true,false]
+    
+    
+    @IBOutlet weak var parkingLotsCollectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,14 +32,21 @@ class ParkingLotSelectorVC: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.lots.count
     }
-    */
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("parkingLotCell", forIndexPath: indexPath) as! ParkingLotCell
+        
+        cell.carImage.hidden = self.image[indexPath.row]
+        cell.lotNumberLbl.text = self.lots[indexPath.row]
+        
+        return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        print("clicou")
+    }
 
 }

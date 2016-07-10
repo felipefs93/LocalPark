@@ -15,12 +15,26 @@ class SectorCell: UICollectionViewCell {
     
     @IBOutlet weak var sectorAvailableParkingLots: UILabel!
     
-//    init() {
-//        super.init()
-//    }
-//    
-//    required init(coder aDecoder: NSCoder) {
-//        super.init(coder: aDecoder)
-//    }
+    override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+        setupView()
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.backgroundColor = UIColor.blueColor()
+        self.layer.borderWidth = 4
+        self.layer.borderColor = UIColor.blackColor().CGColor
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    func setupView(){
+        self.backgroundColor = UIColor.blueColor()
+        self.layer.borderWidth = 4
+        self.layer.borderColor = UIColor.blackColor().CGColor
+    }
     
 }

@@ -10,4 +10,10 @@ import UIKit
 
 class ParkingLotCell: UICollectionViewCell {
     
+    
+    @IBOutlet weak var carImage: UIImageView!
+    
+    
+    @IBOutlet weak var lotNumberLbl: UILabel!
+    
 }
