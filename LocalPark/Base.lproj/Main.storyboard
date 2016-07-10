@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LD3-BW-J3b">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -401,6 +401,9 @@
                                                                 <real key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="payTicket:" destination="LD3-BW-J3b" eventType="touchUpInside" id="zyV-uI-LiU"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTc-eM-8Sc" customClass="CustomButton" customModule="LocalPark" customModuleProvider="target">
                                                         <rect key="frame" x="200" y="144" width="200" height="50"/>
@@ -410,13 +413,16 @@
                                                             <constraint firstAttribute="height" constant="50" id="kK2-np-Jjv"/>
                                                         </constraints>
                                                         <state key="normal" title="Cancelar Ticket">
-                                                            <color key="titleColor" red="0.86666666670000003" green="0.92941176469999998" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="titleColor" red="0.83921568627450982" green="0.90980392156862744" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="cancelTicket:" destination="LD3-BW-J3b" eventType="touchUpInside" id="MW5-vT-RsF"/>
+                                                        </connections>
                                                     </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EQG-Rh-AtL">
                                                         <rect key="frame" x="0.0" y="258" width="600" height="1"/>
@@ -479,11 +485,96 @@
                                     <constraint firstItem="tjk-zy-0Vi" firstAttribute="top" secondItem="5Mf-4A-um4" secondAttribute="top" id="ugV-Yi-8Sq"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aID-Ug-E2e" customClass="CustomAlert" customModule="LocalPark" customModuleProvider="target">
+                                <rect key="frame" x="150" y="520" width="300" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yza-OZ-5hX">
+                                        <rect key="frame" x="8" y="17" width="284" height="24"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você confirma o pagamento?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUW-Fl-Wgj">
+                                        <rect key="frame" x="8" y="68" width="284" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="lC4-k6-tAZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAa-yn-WHP" customClass="CustomButton" customModule="LocalPark" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="155" width="80" height="30"/>
+                                        <color key="backgroundColor" red="0.86666666670000003" green="0.17254901959999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="A3R-1O-Mib"/>
+                                            <constraint firstAttribute="height" constant="30" id="cqH-yD-83y"/>
+                                        </constraints>
+                                        <state key="normal" title="Cancelar">
+                                            <color key="titleColor" red="0.86666666670000003" green="0.92941176469999998" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="buttonCancelClick:" destination="aID-Ug-E2e" eventType="touchUpInside" id="JiV-ru-Ejt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="755-RH-6ka" customClass="CustomButton" customModule="LocalPark" customModuleProvider="target">
+                                        <rect key="frame" x="180" y="155" width="80" height="30"/>
+                                        <color key="backgroundColor" red="0.1333333333" green="0.65490196079999996" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="NWj-UE-Gp3"/>
+                                            <constraint firstAttribute="width" constant="80" id="e60-wX-bXq"/>
+                                        </constraints>
+                                        <state key="normal" title="Confirmar">
+                                            <color key="titleColor" red="0.86666666670000003" green="0.92941176469999998" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="buttonOkClick:" destination="aID-Ug-E2e" eventType="touchUpInside" id="eNe-Cn-pXf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1333333333" green="0.65490196079999996" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Yza-OZ-5hX" firstAttribute="centerX" secondItem="aID-Ug-E2e" secondAttribute="centerX" id="0d9-5u-I4n"/>
+                                    <constraint firstAttribute="trailing" secondItem="755-RH-6ka" secondAttribute="trailing" constant="40" id="2Hm-xJ-GGk"/>
+                                    <constraint firstAttribute="height" constant="200" id="D9g-nP-Rir"/>
+                                    <constraint firstAttribute="bottom" secondItem="tAa-yn-WHP" secondAttribute="bottom" constant="15" id="LEj-0s-IOC"/>
+                                    <constraint firstAttribute="trailing" secondItem="Yza-OZ-5hX" secondAttribute="trailing" constant="8" id="W0K-xW-mDq"/>
+                                    <constraint firstItem="tAa-yn-WHP" firstAttribute="leading" secondItem="aID-Ug-E2e" secondAttribute="leading" constant="40" id="WWX-kX-jw4"/>
+                                    <constraint firstAttribute="bottom" secondItem="755-RH-6ka" secondAttribute="bottom" constant="15" id="WvT-I9-QVn"/>
+                                    <constraint firstItem="Yza-OZ-5hX" firstAttribute="leading" secondItem="aID-Ug-E2e" secondAttribute="leading" constant="8" id="moS-ph-PwL"/>
+                                    <constraint firstItem="eUW-Fl-Wgj" firstAttribute="leading" secondItem="aID-Ug-E2e" secondAttribute="leading" constant="8" id="qSu-ba-720"/>
+                                    <constraint firstItem="eUW-Fl-Wgj" firstAttribute="top" secondItem="Yza-OZ-5hX" secondAttribute="bottom" constant="27" id="s4D-MX-Oqz"/>
+                                    <constraint firstAttribute="width" constant="300" id="sYe-hm-5TU"/>
+                                    <constraint firstItem="Yza-OZ-5hX" firstAttribute="top" secondItem="aID-Ug-E2e" secondAttribute="top" constant="17" id="xbf-um-3UT"/>
+                                    <constraint firstAttribute="trailing" secondItem="eUW-Fl-Wgj" secondAttribute="trailing" constant="8" id="zpA-pc-Ejn"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="alertTextLbl" destination="eUW-Fl-Wgj" id="C0k-Fe-fFO"/>
+                                    <outlet property="alertTitleLbl" destination="Yza-OZ-5hX" id="z1D-eM-nyL"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="KeL-A1-3Jc" firstAttribute="top" secondItem="5Mf-4A-um4" secondAttribute="bottom" id="1uh-gs-bwg"/>
                             <constraint firstItem="igJ-WW-oBV" firstAttribute="top" secondItem="zrR-bQ-YSw" secondAttribute="top" id="1wN-d1-ywv"/>
+                            <constraint firstItem="aID-Ug-E2e" firstAttribute="centerX" secondItem="zrR-bQ-YSw" secondAttribute="centerX" id="Kap-V8-Kzi"/>
+                            <constraint firstItem="aID-Ug-E2e" firstAttribute="centerY" secondItem="zrR-bQ-YSw" secondAttribute="centerY" constant="20" id="Pxx-pk-IWa"/>
                             <constraint firstAttribute="trailing" secondItem="igJ-WW-oBV" secondAttribute="trailing" id="Rdm-4H-Am2"/>
                             <constraint firstItem="Fa5-OJ-Mu8" firstAttribute="width" secondItem="zrR-bQ-YSw" secondAttribute="width" id="WsE-eV-2jI"/>
                             <constraint firstAttribute="trailing" secondItem="5Mf-4A-um4" secondAttribute="trailing" id="YAw-zX-GT3"/>
@@ -495,6 +586,9 @@
                     <tabBarItem key="tabBarItem" title="Item 1" id="LM2-Oc-N5e"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="1200"/>
+                    <connections>
+                        <outlet property="alert" destination="aID-Ug-E2e" id="Lz1-Pm-Ckg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ahx-rR-pWe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
