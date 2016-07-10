@@ -25,6 +25,7 @@
 		9AD347161D328734008BD0C0 /* ParkingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD347151D328734008BD0C0 /* ParkingHelper.swift */; };
 		9AD347181D328769008BD0C0 /* ParkingSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD347171D328769008BD0C0 /* ParkingSpace.swift */; };
 		9AD3471A1D328788008BD0C0 /* TimerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD347191D328788008BD0C0 /* TimerHelper.swift */; };
+		9AD3471C1D3287BB008BD0C0 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3471B1D3287BB008BD0C0 /* Driver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		9AD347151D328734008BD0C0 /* ParkingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingHelper.swift; sourceTree = "<group>"; };
 		9AD347171D328769008BD0C0 /* ParkingSpace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingSpace.swift; sourceTree = "<group>"; };
 		9AD347191D328788008BD0C0 /* TimerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerHelper.swift; sourceTree = "<group>"; };
+		9AD3471B1D3287BB008BD0C0 /* Driver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				9AD347131D328702008BD0C0 /* TicketHelper.swift */,
 				9AD347151D328734008BD0C0 /* ParkingHelper.swift */,
 				9AD347171D328769008BD0C0 /* ParkingSpace.swift */,
+				9AD3471B1D3287BB008BD0C0 /* Driver.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				9AD347121D3286D2008BD0C0 /* Ticket.swift in Sources */,
 				9AD347181D328769008BD0C0 /* ParkingSpace.swift in Sources */,
 				9AD346EE1D29F45D008BD0C0 /* QRReaderVC.swift in Sources */,
+				9AD3471C1D3287BB008BD0C0 /* Driver.swift in Sources */,
 				9AD347101D328691008BD0C0 /* Sector.swift in Sources */,
 				9AD3470A1D31E7FD008BD0C0 /* ParkingLotCell.swift in Sources */,
 				9AD347161D328734008BD0C0 /* ParkingHelper.swift in Sources */,
