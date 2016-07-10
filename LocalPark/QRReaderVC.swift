@@ -71,7 +71,7 @@ class QRReaderVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         if segue.identifier == "toMainVCSegue"{
             
             let tabBarController = segue.destinationViewController as! UITabBarController;
-            let destinationViewController = tabBarController.viewControllers![0] as! MainVC
+            let destinationViewController = tabBarController.viewControllers![0] as! TicketVC
         }
     }
     
@@ -86,7 +86,7 @@ class QRReaderVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         // Check if the metadataObjects array is not nil and it contains at least one object.
         if metadataObjects == nil || metadataObjects.count == 0 {
             qrCodeFrameView?.frame = CGRectZero
-            messageLabel.text = "No QR code is detected"
+            messageLabel.text = "Coloque o código QR na frente da câmera"
             return
         }
         

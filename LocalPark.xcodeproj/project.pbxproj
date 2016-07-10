@@ -12,7 +12,11 @@
 		9AD346F11D29F45D008BD0C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AD346EF1D29F45D008BD0C0 /* Main.storyboard */; };
 		9AD346F31D29F45D008BD0C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AD346F21D29F45D008BD0C0 /* Assets.xcassets */; };
 		9AD346F61D29F45D008BD0C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AD346F41D29F45D008BD0C0 /* LaunchScreen.storyboard */; };
-		9AD347021D29FD6D008BD0C0 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD347011D29FD6D008BD0C0 /* MainVC.swift */; };
+		9AD347021D29FD6D008BD0C0 /* TicketVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD347011D29FD6D008BD0C0 /* TicketVC.swift */; };
+		9AD347041D31E325008BD0C0 /* ParkingSectorSelectorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD347031D31E325008BD0C0 /* ParkingSectorSelectorVC.swift */; };
+		9AD347061D31E34F008BD0C0 /* ParkingLotSelectorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD347051D31E34F008BD0C0 /* ParkingLotSelectorVC.swift */; };
+		9AD347081D31E7E7008BD0C0 /* SectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD347071D31E7E7008BD0C0 /* SectorCell.swift */; };
+		9AD3470A1D31E7FD008BD0C0 /* ParkingLotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD347091D31E7FD008BD0C0 /* ParkingLotCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +27,11 @@
 		9AD346F21D29F45D008BD0C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9AD346F51D29F45D008BD0C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9AD346F71D29F45D008BD0C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9AD347011D29FD6D008BD0C0 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		9AD347011D29FD6D008BD0C0 /* TicketVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketVC.swift; sourceTree = "<group>"; };
+		9AD347031D31E325008BD0C0 /* ParkingSectorSelectorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingSectorSelectorVC.swift; sourceTree = "<group>"; };
+		9AD347051D31E34F008BD0C0 /* ParkingLotSelectorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingLotSelectorVC.swift; sourceTree = "<group>"; };
+		9AD347071D31E7E7008BD0C0 /* SectorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectorCell.swift; sourceTree = "<group>"; };
+		9AD347091D31E7FD008BD0C0 /* ParkingLotCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingLotCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +81,9 @@
 			isa = PBXGroup;
 			children = (
 				9AD346ED1D29F45D008BD0C0 /* QRReaderVC.swift */,
-				9AD347011D29FD6D008BD0C0 /* MainVC.swift */,
+				9AD347011D29FD6D008BD0C0 /* TicketVC.swift */,
+				9AD347031D31E325008BD0C0 /* ParkingSectorSelectorVC.swift */,
+				9AD347051D31E34F008BD0C0 /* ParkingLotSelectorVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -81,6 +91,8 @@
 		9AD346FE1D29FB2E008BD0C0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9AD347071D31E7E7008BD0C0 /* SectorCell.swift */,
+				9AD347091D31E7FD008BD0C0 /* ParkingLotCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -171,8 +183,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AD346EE1D29F45D008BD0C0 /* QRReaderVC.swift in Sources */,
-				9AD347021D29FD6D008BD0C0 /* MainVC.swift in Sources */,
+				9AD3470A1D31E7FD008BD0C0 /* ParkingLotCell.swift in Sources */,
+				9AD347041D31E325008BD0C0 /* ParkingSectorSelectorVC.swift in Sources */,
+				9AD347021D29FD6D008BD0C0 /* TicketVC.swift in Sources */,
+				9AD347081D31E7E7008BD0C0 /* SectorCell.swift in Sources */,
 				9AD346EC1D29F45D008BD0C0 /* AppDelegate.swift in Sources */,
+				9AD347061D31E34F008BD0C0 /* ParkingLotSelectorVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +338,7 @@
 				9AD346FC1D29F45D008BD0C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
