@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LD3-BW-J3b">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uHo-qb-50j">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -221,6 +221,20 @@
                                         <color key="textColor" red="0.86666666670000003" green="0.92941176469999998" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pV6-M9-3te">
+                                        <rect key="frame" x="8" y="10" width="60" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Ito-HG-3Gz"/>
+                                            <constraint firstAttribute="width" constant="60" id="JSa-fV-s7N"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <state key="normal" title="&lt; setores">
+                                            <color key="titleColor" red="0.86666666670000003" green="0.92941176469999998" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonSectorsPressed:" destination="UWD-0t-ro3" eventType="touchUpInside" id="qCb-IL-wft"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1333333333" green="0.65490196079999996" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -229,6 +243,8 @@
                                     <constraint firstItem="cW3-yq-ZwQ" firstAttribute="centerX" secondItem="YY1-ga-9fu" secondAttribute="centerX" id="E0x-mH-iq3"/>
                                     <constraint firstItem="cW3-yq-ZwQ" firstAttribute="leading" secondItem="YY1-ga-9fu" secondAttribute="leading" constant="8" id="GVk-on-sn0"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="FmN-XT-OKE" secondAttribute="trailing" id="H97-0H-QjH"/>
+                                    <constraint firstItem="pV6-M9-3te" firstAttribute="top" secondItem="YY1-ga-9fu" secondAttribute="top" constant="10" id="P9U-iV-Ew0"/>
+                                    <constraint firstItem="pV6-M9-3te" firstAttribute="leading" secondItem="YY1-ga-9fu" secondAttribute="leading" constant="8" id="anA-mN-Oid"/>
                                     <constraint firstAttribute="height" constant="200" id="cuz-C6-m0O"/>
                                     <constraint firstItem="FmN-XT-OKE" firstAttribute="centerX" secondItem="YY1-ga-9fu" secondAttribute="centerX" id="frq-B9-kVe"/>
                                     <constraint firstItem="FmN-XT-OKE" firstAttribute="leading" secondItem="YY1-ga-9fu" secondAttribute="leadingMargin" id="gC7-cZ-Xk8"/>
@@ -300,12 +316,99 @@
                                     <outlet property="delegate" destination="UWD-0t-ro3" id="qKd-H2-Ce8"/>
                                 </connections>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H7W-mq-bEV" customClass="CustomAlert" customModule="LocalPark" customModuleProvider="target">
+                                <rect key="frame" x="150" y="220" width="300" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xv8-Qq-5Wn">
+                                        <rect key="frame" x="8" y="17" width="284" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="q1G-t0-UXy"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você confirma o pagamento?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUa-go-abb">
+                                        <rect key="frame" x="8" y="68" width="284" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="UPR-2H-JDW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kpc-S9-EbX" customClass="CustomButton" customModule="LocalPark" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="158" width="80" height="30"/>
+                                        <color key="backgroundColor" red="0.86666666670000003" green="0.17254901959999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="0Ax-qv-nC3"/>
+                                            <constraint firstAttribute="height" constant="30" id="aDS-R0-lfi"/>
+                                        </constraints>
+                                        <state key="normal" title="Cancelar">
+                                            <color key="titleColor" red="0.86666666670000003" green="0.92941176469999998" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="buttonCancelClick:" destination="H7W-mq-bEV" eventType="touchUpInside" id="DIf-S0-1dO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4SB-6Q-VHO" customClass="CustomButton" customModule="LocalPark" customModuleProvider="target">
+                                        <rect key="frame" x="180" y="158" width="80" height="30"/>
+                                        <color key="backgroundColor" red="0.1333333333" green="0.65490196079999996" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="UJj-zO-6TL"/>
+                                            <constraint firstAttribute="height" constant="30" id="aud-zo-fod"/>
+                                        </constraints>
+                                        <state key="normal" title="Confirmar">
+                                            <color key="titleColor" red="0.86666666670000003" green="0.92941176469999998" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="buttonOkClick:" destination="H7W-mq-bEV" eventType="touchUpInside" id="kR9-Jk-jZo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1333333333" green="0.65490196079999996" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="1fO-cG-ykf"/>
+                                    <constraint firstItem="xv8-Qq-5Wn" firstAttribute="top" secondItem="H7W-mq-bEV" secondAttribute="top" constant="17" id="EMq-PS-bM5"/>
+                                    <constraint firstAttribute="trailing" secondItem="4SB-6Q-VHO" secondAttribute="trailing" constant="40" id="Hwh-sC-Ex2"/>
+                                    <constraint firstAttribute="trailing" secondItem="jUa-go-abb" secondAttribute="trailing" constant="8" id="PzU-xa-dfQ"/>
+                                    <constraint firstItem="Kpc-S9-EbX" firstAttribute="leading" secondItem="H7W-mq-bEV" secondAttribute="leading" constant="40" id="SCy-yL-1U4"/>
+                                    <constraint firstItem="jUa-go-abb" firstAttribute="top" secondItem="xv8-Qq-5Wn" secondAttribute="bottom" constant="27" id="TKP-vv-4kW"/>
+                                    <constraint firstAttribute="bottom" secondItem="4SB-6Q-VHO" secondAttribute="bottom" constant="15" id="Txq-eb-u3Y"/>
+                                    <constraint firstAttribute="trailing" secondItem="xv8-Qq-5Wn" secondAttribute="trailing" constant="8" id="ZZU-xH-EZq"/>
+                                    <constraint firstItem="jUa-go-abb" firstAttribute="leading" secondItem="H7W-mq-bEV" secondAttribute="leading" constant="8" id="liM-GR-Exq"/>
+                                    <constraint firstAttribute="height" constant="200" id="pry-W2-SRa"/>
+                                    <constraint firstItem="xv8-Qq-5Wn" firstAttribute="leading" secondItem="H7W-mq-bEV" secondAttribute="leading" constant="8" id="sZz-Kt-PJC"/>
+                                    <constraint firstAttribute="bottom" secondItem="Kpc-S9-EbX" secondAttribute="bottom" constant="15" id="xye-zP-bE2"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="alertTextLbl" destination="jUa-go-abb" id="iQ9-Qg-aoP"/>
+                                    <outlet property="alertTitleLbl" destination="xv8-Qq-5Wn" id="jNh-cJ-wRq"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="YY1-ga-9fu" secondAttribute="trailing" id="54l-cK-tpQ"/>
                             <constraint firstItem="ExU-jT-rYa" firstAttribute="top" secondItem="YY1-ga-9fu" secondAttribute="bottom" id="JMX-U7-xuv"/>
+                            <constraint firstItem="H7W-mq-bEV" firstAttribute="centerX" secondItem="Hv2-t6-Nkb" secondAttribute="centerX" id="Qpw-or-KBq"/>
                             <constraint firstItem="YY1-ga-9fu" firstAttribute="leading" secondItem="Hv2-t6-Nkb" secondAttribute="leading" id="Ulz-92-sO8"/>
+                            <constraint firstItem="H7W-mq-bEV" firstAttribute="centerY" secondItem="Hv2-t6-Nkb" secondAttribute="centerY" constant="20" id="Wx9-Pb-MNw"/>
                             <constraint firstItem="o73-LZ-3FT" firstAttribute="top" secondItem="ExU-jT-rYa" secondAttribute="bottom" id="avw-Xh-NW8"/>
                             <constraint firstAttribute="trailing" secondItem="ExU-jT-rYa" secondAttribute="trailing" id="dRz-4p-ac8"/>
                             <constraint firstItem="ExU-jT-rYa" firstAttribute="leading" secondItem="Hv2-t6-Nkb" secondAttribute="leading" id="mKB-2g-pAJ"/>
@@ -313,6 +416,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="alert" destination="H7W-mq-bEV" id="Ipk-Iy-A8e"/>
                         <outlet property="parkingLotsCollectionView" destination="ExU-jT-rYa" id="3RR-Rj-4rZ"/>
                     </connections>
                 </viewController>

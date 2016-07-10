@@ -8,9 +8,12 @@
 
 import UIKit
 
-class ParkingLotSelectorVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class ParkingLotSelectorVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, CustomAlertDelegate {
     
     var text:String!
+    
+    
+    @IBOutlet weak var alert: CustomAlert!
     
     let lots = ["1","2","3","4","5","6"]
     let image = [true,false,false,false,true,false]
@@ -22,6 +25,8 @@ class ParkingLotSelectorVC: UIViewController, UICollectionViewDataSource, UIColl
         super.viewDidLoad()
         
         print(text)
+        alert.delegate = self
+        alert.unshow()
 
         // Do any additional setup after loading the view.
     }
@@ -47,6 +52,22 @@ class ParkingLotSelectorVC: UIViewController, UICollectionViewDataSource, UIColl
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         print("clicou")
+        alert.setupTitle("Confirmar seleção de vaga", andText: "Você confirma a seleção da vaga \(lots[indexPath.row])?")
+        alert.show()
     }
+    
+    func buttonCancelPressed() {
+        alert.unshow()
+    }
+    
+    func buttonOkPressed() {
+        print("selecionou a vaga")
+    }
+    
+    @IBAction func buttonSectorsPressed(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
+    }
+    
 
 }
