@@ -17,6 +17,7 @@
 		9AD347061D31E34F008BD0C0 /* ParkingLotSelectorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD347051D31E34F008BD0C0 /* ParkingLotSelectorVC.swift */; };
 		9AD347081D31E7E7008BD0C0 /* SectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD347071D31E7E7008BD0C0 /* SectorCell.swift */; };
 		9AD3470A1D31E7FD008BD0C0 /* ParkingLotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD347091D31E7FD008BD0C0 /* ParkingLotCell.swift */; };
+		9AD3470C1D31F5DA008BD0C0 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3470B1D31F5DA008BD0C0 /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		9AD347051D31E34F008BD0C0 /* ParkingLotSelectorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingLotSelectorVC.swift; sourceTree = "<group>"; };
 		9AD347071D31E7E7008BD0C0 /* SectorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectorCell.swift; sourceTree = "<group>"; };
 		9AD347091D31E7FD008BD0C0 /* ParkingLotCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingLotCell.swift; sourceTree = "<group>"; };
+		9AD3470B1D31F5DA008BD0C0 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			children = (
 				9AD347071D31E7E7008BD0C0 /* SectorCell.swift */,
 				9AD347091D31E7FD008BD0C0 /* ParkingLotCell.swift */,
+				9AD3470B1D31F5DA008BD0C0 /* CustomButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				9AD347081D31E7E7008BD0C0 /* SectorCell.swift in Sources */,
 				9AD346EC1D29F45D008BD0C0 /* AppDelegate.swift in Sources */,
 				9AD347061D31E34F008BD0C0 /* ParkingLotSelectorVC.swift in Sources */,
+				9AD3470C1D31F5DA008BD0C0 /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
