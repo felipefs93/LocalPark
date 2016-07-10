@@ -19,6 +19,7 @@
 		9AD3470A1D31E7FD008BD0C0 /* ParkingLotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD347091D31E7FD008BD0C0 /* ParkingLotCell.swift */; };
 		9AD3470C1D31F5DA008BD0C0 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3470B1D31F5DA008BD0C0 /* CustomButton.swift */; };
 		9AD3470E1D328622008BD0C0 /* Parking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3470D1D328622008BD0C0 /* Parking.swift */; };
+		9AD347101D328691008BD0C0 /* Sector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3470F1D328691008BD0C0 /* Sector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		9AD347091D31E7FD008BD0C0 /* ParkingLotCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingLotCell.swift; sourceTree = "<group>"; };
 		9AD3470B1D31F5DA008BD0C0 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		9AD3470D1D328622008BD0C0 /* Parking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parking.swift; sourceTree = "<group>"; };
+		9AD3470F1D328691008BD0C0 /* Sector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				9AD3470D1D328622008BD0C0 /* Parking.swift */,
+				9AD3470F1D328691008BD0C0 /* Sector.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AD346EE1D29F45D008BD0C0 /* QRReaderVC.swift in Sources */,
+				9AD347101D328691008BD0C0 /* Sector.swift in Sources */,
 				9AD3470A1D31E7FD008BD0C0 /* ParkingLotCell.swift in Sources */,
 				9AD347041D31E325008BD0C0 /* ParkingSectorSelectorVC.swift in Sources */,
 				9AD347021D29FD6D008BD0C0 /* TicketVC.swift in Sources */,
