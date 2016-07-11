@@ -419,6 +419,7 @@
                     <connections>
                         <outlet property="alert" destination="H7W-mq-bEV" id="Ipk-Iy-A8e"/>
                         <outlet property="parkingLotsCollectionView" destination="ExU-jT-rYa" id="3RR-Rj-4rZ"/>
+                        <outlet property="parkingNameLbl" destination="cW3-yq-ZwQ" id="W5H-r7-nOD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZrS-qv-Waa" userLabel="First Responder" sceneMemberID="firstResponder"/>

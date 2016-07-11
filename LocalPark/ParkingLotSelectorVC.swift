@@ -12,6 +12,7 @@ class ParkingLotSelectorVC: UIViewController, UICollectionViewDataSource, UIColl
     
     var text:String!
     
+    @IBOutlet weak var parkingNameLbl: UILabel!
     
     @IBOutlet weak var alert: CustomAlert!
     
