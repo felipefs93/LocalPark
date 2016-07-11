@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uHo-qb-50j">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3QF-QZ-C55">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -723,11 +723,111 @@
                         <outlet property="parkingPriceTableTextView" destination="njM-6P-JLs" id="klW-Jj-M6X"/>
                         <outlet property="priceLbl" destination="FMt-jc-52Y" id="4lD-wE-oiX"/>
                         <outlet property="spaceAndSectorLbl" destination="EwX-yo-3i5" id="oEY-IQ-PMM"/>
+                        <segue destination="3QF-QZ-C55" kind="show" identifier="goToPaymentVCSegue" id="Cag-09-K8R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ahx-rR-pWe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1756" y="-172"/>
+        </scene>
+        <!--PaymentVC-->
+        <scene sceneID="mxO-yY-erZ">
+            <objects>
+                <viewController id="3QF-QZ-C55" customClass="PaymentVC" customModule="LocalPark" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jor-ty-z5L"/>
+                        <viewControllerLayoutGuide type="bottom" id="bfY-mW-1jt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WqN-QU-dG2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="830"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j8l-wR-MQF">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixc-YS-Tav">
+                                        <rect key="frame" x="8" y="38" width="584" height="51"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="51" id="HHV-Ao-aNh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="42"/>
+                                        <color key="textColor" red="0.86666666670000003" green="0.92941176469999998" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1333333333" green="0.65490196079999996" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="ixc-YS-Tav" firstAttribute="leading" secondItem="j8l-wR-MQF" secondAttribute="leading" constant="8" id="6ch-KF-r2r"/>
+                                    <constraint firstAttribute="trailing" secondItem="ixc-YS-Tav" secondAttribute="trailing" constant="8" id="GLu-tw-MqY"/>
+                                    <constraint firstAttribute="height" constant="128" id="TTp-WO-vt8"/>
+                                    <constraint firstItem="ixc-YS-Tav" firstAttribute="top" secondItem="j8l-wR-MQF" secondAttribute="top" constant="38" id="duH-fr-ZzP"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Número do cartão" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dU0-3r-dWo">
+                                <rect key="frame" x="20" y="254" width="560" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Validade" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xNj-5u-UHs">
+                                <rect key="frame" x="20" y="304" width="433" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CVC" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X8Z-Ej-oh4">
+                                <rect key="frame" x="467" y="304" width="113" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="113" id="QTI-pw-sOw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2M-Mt-Q1l" customClass="CustomButton" customModule="LocalPark" customModuleProvider="target">
+                                <rect key="frame" x="200" y="691" width="200" height="50"/>
+                                <color key="backgroundColor" red="0.1333333333" green="0.65490196079999996" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="P49-Kt-fCO"/>
+                                    <constraint firstAttribute="height" constant="50" id="k9A-uK-CQX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Pagar">
+                                    <color key="titleColor" red="0.86666666670000003" green="0.92941176469999998" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do proprietário do cartão" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7NG-XD-bt7">
+                                <rect key="frame" x="20" y="204" width="560" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="j8l-wR-MQF" firstAttribute="top" secondItem="WqN-QU-dG2" secondAttribute="top" id="0Yq-Xu-cgw"/>
+                            <constraint firstItem="bfY-mW-1jt" firstAttribute="top" secondItem="n2M-Mt-Q1l" secondAttribute="bottom" constant="40" id="1Ck-AY-2DA"/>
+                            <constraint firstAttribute="trailing" secondItem="j8l-wR-MQF" secondAttribute="trailing" id="22L-Vt-4Yd"/>
+                            <constraint firstItem="dU0-3r-dWo" firstAttribute="top" secondItem="7NG-XD-bt7" secondAttribute="bottom" constant="20" id="42S-1z-suf"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="dU0-3r-dWo" secondAttribute="leading" id="5ij-uH-cme"/>
+                            <constraint firstItem="xNj-5u-UHs" firstAttribute="leading" secondItem="dU0-3r-dWo" secondAttribute="leading" id="D3f-yB-7qf"/>
+                            <constraint firstItem="X8Z-Ej-oh4" firstAttribute="top" secondItem="dU0-3r-dWo" secondAttribute="bottom" constant="20" id="JQf-Id-FPM"/>
+                            <constraint firstItem="j8l-wR-MQF" firstAttribute="leading" secondItem="WqN-QU-dG2" secondAttribute="leading" id="XlI-d0-c10"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dU0-3r-dWo" secondAttribute="trailing" id="Y0t-zZ-4E5"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="7NG-XD-bt7" secondAttribute="leading" id="cSX-wc-OKi"/>
+                            <constraint firstItem="X8Z-Ej-oh4" firstAttribute="trailing" secondItem="dU0-3r-dWo" secondAttribute="trailing" id="dI3-rj-LDW"/>
+                            <constraint firstItem="X8Z-Ej-oh4" firstAttribute="leading" secondItem="xNj-5u-UHs" secondAttribute="trailing" constant="14" id="epZ-fo-QwC"/>
+                            <constraint firstItem="n2M-Mt-Q1l" firstAttribute="centerX" secondItem="WqN-QU-dG2" secondAttribute="centerX" id="fne-xN-6tz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7NG-XD-bt7" secondAttribute="trailing" id="kps-Qd-rh2"/>
+                            <constraint firstItem="xNj-5u-UHs" firstAttribute="top" secondItem="dU0-3r-dWo" secondAttribute="bottom" constant="20" id="ndb-7s-1Ny"/>
+                            <constraint firstItem="7NG-XD-bt7" firstAttribute="top" secondItem="jor-ty-z5L" secondAttribute="bottom" constant="184" id="xJc-0g-77Z"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8mX-Zg-DJj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2505" y="-172"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="fxj-Dq-qTx">

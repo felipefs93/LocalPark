@@ -29,6 +29,7 @@
 		9AD3471E1D3287E5008BD0C0 /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3471D1D3287E5008BD0C0 /* CreditCard.swift */; };
 		9AD347401D32F9B3008BD0C0 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3473F1D32F9B3008BD0C0 /* CustomAlert.swift */; };
 		9AD347421D332D3D008BD0C0 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD347411D332D3D008BD0C0 /* Factory.swift */; };
+		9AD347441D335166008BD0C0 /* PaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD347431D335166008BD0C0 /* PaymentVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		9AD3471D1D3287E5008BD0C0 /* CreditCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
 		9AD3473F1D32F9B3008BD0C0 /* CustomAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 		9AD347411D332D3D008BD0C0 /* Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
+		9AD347431D335166008BD0C0 /* PaymentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				9AD347011D29FD6D008BD0C0 /* TicketVC.swift */,
 				9AD347031D31E325008BD0C0 /* ParkingSectorSelectorVC.swift */,
 				9AD347051D31E34F008BD0C0 /* ParkingLotSelectorVC.swift */,
+				9AD347431D335166008BD0C0 /* PaymentVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				9AD347141D328702008BD0C0 /* TicketHelper.swift in Sources */,
 				9AD347421D332D3D008BD0C0 /* Factory.swift in Sources */,
 				9AD347021D29FD6D008BD0C0 /* TicketVC.swift in Sources */,
+				9AD347441D335166008BD0C0 /* PaymentVC.swift in Sources */,
 				9AD3470E1D328622008BD0C0 /* Parking.swift in Sources */,
 				9AD347081D31E7E7008BD0C0 /* SectorCell.swift in Sources */,
 				9AD346EC1D29F45D008BD0C0 /* AppDelegate.swift in Sources */,
