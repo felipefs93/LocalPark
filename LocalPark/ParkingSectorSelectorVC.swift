@@ -16,18 +16,12 @@ class ParkingSectorSelectorVC: UIViewController, UICollectionViewDelegate, UICol
     
     @IBOutlet weak var parkingTitleLbl: UILabel!
     
-//    let sectors = ["A","B","C","D","E","F","G"]
-//    let parkingLotsAvailable = ["Vagas: 4/20","Vagas: 4/20","Vagas:var20","Vagas: 4/20","Vagas: 4/20","Vagas: 4/20","Vagas: 4/20"]
-    
     var sectors:[Sector]!
-    let parkingLotsAvailable = ["Vagas: 4/20","Vagas: 4/20","Vagas: 4/20","Vagas: 4/20","Vagas: 4/20","Vagas: 4/20","Vagas: 4/20"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         parkingTitleLbl.text = Factory.singleton.parking.name
         sectors = ParkingHelper.sharedInstance.getSectorsFromParking(Factory.singleton.parking)
-
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -68,7 +62,6 @@ class ParkingSectorSelectorVC: UIViewController, UICollectionViewDelegate, UICol
             
             let vc = segue.destinationViewController as! ParkingLotSelectorVC
             
-            //vc.text = self.parkingLotsAvailable[indexPath.row]
             vc.parkingSpaces = ParkingHelper.sharedInstance.getParkingsSpacesFromSector(sectors[indexPath.row])
         }
     }
