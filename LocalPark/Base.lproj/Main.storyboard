@@ -178,7 +178,7 @@
                             <constraint firstItem="Nqy-zb-Qx4" firstAttribute="leading" secondItem="wZs-F1-UFG" secondAttribute="leading" id="mVw-Eb-fTz"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="Wqf-Ib-Fbc"/>
+                    <tabBarItem key="tabBarItem" title="Item 2" image="search_btn" id="Wqf-Ib-Fbc"/>
                     <connections>
                         <outlet property="sectorsCollectionView" destination="Nqy-zb-Qx4" id="iRL-f1-ap0"/>
                         <segue destination="UWD-0t-ro3" kind="show" identifier="showLots" id="Us9-Bd-L9X"/>
@@ -433,11 +433,11 @@
                         <viewControllerLayoutGuide type="bottom" id="KeL-A1-3Jc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zrR-bQ-YSw">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="1200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="830"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aID-Ug-E2e" customClass="CustomAlert" customModule="LocalPark" customModuleProvider="target">
-                                <rect key="frame" x="150" y="520" width="300" height="200"/>
+                                <rect key="frame" x="150" y="335" width="300" height="200"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yza-OZ-5hX">
                                         <rect key="frame" x="8" y="17" width="284" height="24"/>
@@ -577,10 +577,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Mf-4A-um4">
-                                <rect key="frame" x="0.0" y="200" width="600" height="951"/>
+                                <rect key="frame" x="0.0" y="200" width="600" height="581"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjk-zy-0Vi">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="951"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="581"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fa5-OJ-Mu8">
                                                 <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
@@ -643,7 +643,7 @@
                                                                 <color key="textColor" red="0.86666666670000003" green="0.92941176469999998" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="1ª Hora ------------------------- R$ 2.00" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="njM-6P-JLs">
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="1ª Hora ------------------------- R$ 2.00" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="njM-6P-JLs">
                                                                 <rect key="frame" x="8" y="106" width="584" height="169"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="169" id="Hks-Pd-8Ov"/>
@@ -711,12 +711,14 @@
                             <constraint firstItem="5Mf-4A-um4" firstAttribute="leading" secondItem="zrR-bQ-YSw" secondAttribute="leading" id="l5x-oE-NGH"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="LM2-Oc-N5e"/>
+                    <tabBarItem key="tabBarItem" title="Item 1" image="username_icon" id="LM2-Oc-N5e"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="1200"/>
+                    <size key="freeformSize" width="600" height="830"/>
                     <connections>
                         <outlet property="alert" destination="aID-Ug-E2e" id="Lz1-Pm-Ckg"/>
                         <outlet property="durationLbl" destination="ecL-rx-wF4" id="btM-XJ-tfS"/>
+                        <outlet property="parkingNameLbl" destination="Iph-2C-Mp5" id="Dm4-Ds-NmW"/>
+                        <outlet property="parkingPriceTableTextView" destination="njM-6P-JLs" id="klW-Jj-M6X"/>
                         <outlet property="priceLbl" destination="FMt-jc-52Y" id="4lD-wE-oiX"/>
                         <outlet property="spaceAndSectorLbl" destination="EwX-yo-3i5" id="oEY-IQ-PMM"/>
                     </connections>
@@ -746,6 +748,8 @@
     </scenes>
     <resources>
         <image name="car2" width="150" height="150"/>
+        <image name="search_btn" width="30" height="30"/>
+        <image name="username_icon" width="20" height="20"/>
         <image name="vaga" width="100" height="100"/>
     </resources>
 </document>

@@ -17,6 +17,10 @@ class TicketVC: UIViewController, CustomAlertDelegate {
     @IBOutlet weak var spaceAndSectorLbl: UILabel!
     
     
+    @IBOutlet weak var parkingNameLbl: UILabel!
+    
+    @IBOutlet weak var parkingPriceTableTextView: UITextView!
+    
     @IBOutlet weak var alert: CustomAlert!
 
     override func viewDidLoad() {
