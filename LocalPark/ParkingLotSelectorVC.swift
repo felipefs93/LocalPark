@@ -63,6 +63,10 @@ class ParkingLotSelectorVC: UIViewController, UICollectionViewDataSource, UIColl
     
     func buttonOkPressed() {
         print("selecionou a vaga")
+        alert.unshow()
+        let tbc = self.presentingViewController as! UITabBarController
+        tbc.selectedIndex = 0
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     @IBAction func buttonSectorsPressed(sender: AnyObject) {
