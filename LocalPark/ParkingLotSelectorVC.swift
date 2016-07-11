@@ -19,6 +19,8 @@ class ParkingLotSelectorVC: UIViewController, UICollectionViewDataSource, UIColl
     let lots = ["1","2","3","4","5","6"]
     let image = [true,false,false,false,true,false]
     
+    var parkingSpaces:[ParkingSpace]!
+    
     
     @IBOutlet weak var parkingLotsCollectionView: UICollectionView!
 
@@ -27,11 +29,9 @@ class ParkingLotSelectorVC: UIViewController, UICollectionViewDataSource, UIColl
         
         parkingNameLbl.text = Factory.singleton.parking.name
         
-        print(text)
         alert.delegate = self
         alert.unshow()
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,21 +41,22 @@ class ParkingLotSelectorVC: UIViewController, UICollectionViewDataSource, UIColl
     
 
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.lots.count
+        return self.parkingSpaces.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("parkingLotCell", forIndexPath: indexPath) as! ParkingLotCell
         
-        cell.carImage.hidden = self.image[indexPath.row]
-        cell.lotNumberLbl.text = self.lots[indexPath.row]
+        let parkingSpace = parkingSpaces[indexPath.row]
+        cell.setupCell(parkingSpace.spaceNumber, freeSpace: parkingSpace.isSpaceFree())
+        
         
         return cell
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         print("clicou")
-        alert.setupTitle("Confirmar seleção de vaga", andText: "Você confirma a seleção da vaga \(lots[indexPath.row])?")
+        alert.setupTitle("Confirmar seleção de vaga", andText: "Você confirma a seleção da vaga \(parkingSpaces[indexPath.row].spaceNumber) no setor \(parkingSpaces[indexPath.row].sector.name)?")
         alert.show()
     }
     

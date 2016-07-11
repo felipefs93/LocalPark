@@ -16,8 +16,8 @@ class ParkingLotCell: UICollectionViewCell {
     
     @IBOutlet weak var lotNumberLbl: UILabel!
     
-    func setupCell(number:String, freeSpace:Bool){
-        lotNumberLbl.text = number
+    func setupCell(number:Int, freeSpace:Bool){
+        lotNumberLbl.text = String(number)
         carImage.hidden = freeSpace
         
     }
