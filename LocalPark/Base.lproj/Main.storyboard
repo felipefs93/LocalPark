@@ -50,7 +50,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--Item 2-->
+        <!--Vaga-->
         <scene sceneID="7F5-EO-lnF">
             <objects>
                 <viewController id="pBA-gK-S7Z" customClass="ParkingSectorSelectorVC" customModule="LocalPark" customModuleProvider="target" sceneMemberID="viewController">
@@ -178,7 +178,7 @@
                             <constraint firstItem="Nqy-zb-Qx4" firstAttribute="leading" secondItem="wZs-F1-UFG" secondAttribute="leading" id="mVw-Eb-fTz"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" image="search_btn" id="Wqf-Ib-Fbc"/>
+                    <tabBarItem key="tabBarItem" title="Vaga" image="search_btn" id="Wqf-Ib-Fbc"/>
                     <connections>
                         <outlet property="sectorsCollectionView" destination="Nqy-zb-Qx4" id="iRL-f1-ap0"/>
                         <segue destination="UWD-0t-ro3" kind="show" identifier="showLots" id="Us9-Bd-L9X"/>
@@ -424,7 +424,7 @@
             </objects>
             <point key="canvasLocation" x="2420" y="1211"/>
         </scene>
-        <!--Item 1-->
+        <!--Ticket-->
         <scene sceneID="5Ca-uX-zys">
             <objects>
                 <viewController id="LD3-BW-J3b" customClass="TicketVC" customModule="LocalPark" customModuleProvider="target" sceneMemberID="viewController">
@@ -711,7 +711,7 @@
                             <constraint firstItem="5Mf-4A-um4" firstAttribute="leading" secondItem="zrR-bQ-YSw" secondAttribute="leading" id="l5x-oE-NGH"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" image="username_icon" id="LM2-Oc-N5e"/>
+                    <tabBarItem key="tabBarItem" title="Ticket" image="username_icon" id="LM2-Oc-N5e"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="830"/>
                     <connections>
