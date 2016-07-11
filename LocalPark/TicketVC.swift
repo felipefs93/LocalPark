@@ -84,6 +84,8 @@ class TicketVC: UIViewController, CustomAlertDelegate {
             alert.unshow()
         }else if lastButtonIndex == 1{
             print("Clicou 0")
+            alert.unshow()
+            self.dismissViewControllerAnimated(true, completion: nil)
         }
     }
     

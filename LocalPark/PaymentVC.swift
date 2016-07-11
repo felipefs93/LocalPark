@@ -8,9 +8,11 @@
 
 import UIKit
 
-class PaymentVC: UIViewController {
+class PaymentVC: UIViewController, UITextFieldDelegate {
     
     var priceText:String!
+    
+    
     
     @IBOutlet weak var priceLbl: UILabel!
 
