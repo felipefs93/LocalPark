@@ -11,6 +11,12 @@ import UIKit
 class TicketVC: UIViewController, CustomAlertDelegate {
     
     
+    @IBOutlet weak var priceLbl: UILabel!
+    @IBOutlet weak var durationLbl: UILabel!
+    
+    @IBOutlet weak var spaceAndSectorLbl: UILabel!
+    
+    
     @IBOutlet weak var alert: CustomAlert!
 
     override func viewDidLoad() {

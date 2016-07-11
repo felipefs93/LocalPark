@@ -716,6 +716,9 @@
                     <size key="freeformSize" width="600" height="1200"/>
                     <connections>
                         <outlet property="alert" destination="aID-Ug-E2e" id="Lz1-Pm-Ckg"/>
+                        <outlet property="durationLbl" destination="ecL-rx-wF4" id="btM-XJ-tfS"/>
+                        <outlet property="priceLbl" destination="FMt-jc-52Y" id="4lD-wE-oiX"/>
+                        <outlet property="spaceAndSectorLbl" destination="EwX-yo-3i5" id="oEY-IQ-PMM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ahx-rR-pWe" userLabel="First Responder" sceneMemberID="firstResponder"/>
