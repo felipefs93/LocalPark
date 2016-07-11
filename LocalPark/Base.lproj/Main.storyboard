@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3QF-QZ-C55">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uHo-qb-50j">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -438,89 +438,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="830"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aID-Ug-E2e" customClass="CustomAlert" customModule="LocalPark" customModuleProvider="target">
-                                <rect key="frame" x="150" y="335" width="300" height="200"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yza-OZ-5hX">
-                                        <rect key="frame" x="8" y="17" width="284" height="24"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você confirma o pagamento?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUW-Fl-Wgj">
-                                        <rect key="frame" x="8" y="68" width="284" height="56"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="56" id="lC4-k6-tAZ"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAa-yn-WHP" customClass="CustomButton" customModule="LocalPark" customModuleProvider="target">
-                                        <rect key="frame" x="40" y="155" width="80" height="30"/>
-                                        <color key="backgroundColor" red="0.86666666670000003" green="0.17254901959999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="A3R-1O-Mib"/>
-                                            <constraint firstAttribute="height" constant="30" id="cqH-yD-83y"/>
-                                        </constraints>
-                                        <state key="normal" title="Cancelar">
-                                            <color key="titleColor" red="0.86666666670000003" green="0.92941176469999998" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="8"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="buttonCancelClick:" destination="aID-Ug-E2e" eventType="touchUpInside" id="JiV-ru-Ejt"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="755-RH-6ka" customClass="CustomButton" customModule="LocalPark" customModuleProvider="target">
-                                        <rect key="frame" x="180" y="155" width="80" height="30"/>
-                                        <color key="backgroundColor" red="0.1333333333" green="0.65490196079999996" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="NWj-UE-Gp3"/>
-                                            <constraint firstAttribute="width" constant="80" id="e60-wX-bXq"/>
-                                        </constraints>
-                                        <state key="normal" title="Confirmar">
-                                            <color key="titleColor" red="0.86666666670000003" green="0.92941176469999998" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="8"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="buttonOkClick:" destination="aID-Ug-E2e" eventType="touchUpInside" id="eNe-Cn-pXf"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.1333333333" green="0.65490196079999996" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="Yza-OZ-5hX" firstAttribute="centerX" secondItem="aID-Ug-E2e" secondAttribute="centerX" id="0d9-5u-I4n"/>
-                                    <constraint firstAttribute="trailing" secondItem="755-RH-6ka" secondAttribute="trailing" constant="40" id="2Hm-xJ-GGk"/>
-                                    <constraint firstAttribute="height" constant="200" id="D9g-nP-Rir"/>
-                                    <constraint firstAttribute="bottom" secondItem="tAa-yn-WHP" secondAttribute="bottom" constant="15" id="LEj-0s-IOC"/>
-                                    <constraint firstAttribute="trailing" secondItem="Yza-OZ-5hX" secondAttribute="trailing" constant="8" id="W0K-xW-mDq"/>
-                                    <constraint firstItem="tAa-yn-WHP" firstAttribute="leading" secondItem="aID-Ug-E2e" secondAttribute="leading" constant="40" id="WWX-kX-jw4"/>
-                                    <constraint firstAttribute="bottom" secondItem="755-RH-6ka" secondAttribute="bottom" constant="15" id="WvT-I9-QVn"/>
-                                    <constraint firstItem="Yza-OZ-5hX" firstAttribute="leading" secondItem="aID-Ug-E2e" secondAttribute="leading" constant="8" id="moS-ph-PwL"/>
-                                    <constraint firstItem="eUW-Fl-Wgj" firstAttribute="leading" secondItem="aID-Ug-E2e" secondAttribute="leading" constant="8" id="qSu-ba-720"/>
-                                    <constraint firstItem="eUW-Fl-Wgj" firstAttribute="top" secondItem="Yza-OZ-5hX" secondAttribute="bottom" constant="27" id="s4D-MX-Oqz"/>
-                                    <constraint firstAttribute="width" constant="300" id="sYe-hm-5TU"/>
-                                    <constraint firstItem="Yza-OZ-5hX" firstAttribute="top" secondItem="aID-Ug-E2e" secondAttribute="top" constant="17" id="xbf-um-3UT"/>
-                                    <constraint firstAttribute="trailing" secondItem="eUW-Fl-Wgj" secondAttribute="trailing" constant="8" id="zpA-pc-Ejn"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="16"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outlet property="alertTextLbl" destination="eUW-Fl-Wgj" id="C0k-Fe-fFO"/>
-                                    <outlet property="alertTitleLbl" destination="Yza-OZ-5hX" id="z1D-eM-nyL"/>
-                                </connections>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="igJ-WW-oBV">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
                                 <subviews>
@@ -606,7 +523,7 @@
                                                             <action selector="payTicket:" destination="LD3-BW-J3b" eventType="touchUpInside" id="zyV-uI-LiU"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTc-eM-8Sc" customClass="CustomButton" customModule="LocalPark" customModuleProvider="target">
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTc-eM-8Sc" customClass="CustomButton" customModule="LocalPark" customModuleProvider="target">
                                                         <rect key="frame" x="200" y="144" width="200" height="50"/>
                                                         <color key="backgroundColor" red="0.8666666666666667" green="0.17254901960784313" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
@@ -698,6 +615,89 @@
                                     <constraint firstItem="tjk-zy-0Vi" firstAttribute="top" secondItem="5Mf-4A-um4" secondAttribute="top" id="ugV-Yi-8Sq"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aID-Ug-E2e" customClass="CustomAlert" customModule="LocalPark" customModuleProvider="target">
+                                <rect key="frame" x="150" y="335" width="300" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yza-OZ-5hX">
+                                        <rect key="frame" x="8" y="17" width="284" height="24"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você confirma o pagamento?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUW-Fl-Wgj">
+                                        <rect key="frame" x="8" y="68" width="284" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="lC4-k6-tAZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAa-yn-WHP" customClass="CustomButton" customModule="LocalPark" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="155" width="80" height="30"/>
+                                        <color key="backgroundColor" red="0.86666666670000003" green="0.17254901959999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="A3R-1O-Mib"/>
+                                            <constraint firstAttribute="height" constant="30" id="cqH-yD-83y"/>
+                                        </constraints>
+                                        <state key="normal" title="Cancelar">
+                                            <color key="titleColor" red="0.86666666670000003" green="0.92941176469999998" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="buttonCancelClick:" destination="aID-Ug-E2e" eventType="touchUpInside" id="JiV-ru-Ejt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="755-RH-6ka" customClass="CustomButton" customModule="LocalPark" customModuleProvider="target">
+                                        <rect key="frame" x="180" y="155" width="80" height="30"/>
+                                        <color key="backgroundColor" red="0.1333333333" green="0.65490196079999996" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="NWj-UE-Gp3"/>
+                                            <constraint firstAttribute="width" constant="80" id="e60-wX-bXq"/>
+                                        </constraints>
+                                        <state key="normal" title="Confirmar">
+                                            <color key="titleColor" red="0.86666666670000003" green="0.92941176469999998" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="buttonOkClick:" destination="aID-Ug-E2e" eventType="touchUpInside" id="eNe-Cn-pXf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1333333333" green="0.65490196079999996" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Yza-OZ-5hX" firstAttribute="centerX" secondItem="aID-Ug-E2e" secondAttribute="centerX" id="0d9-5u-I4n"/>
+                                    <constraint firstAttribute="trailing" secondItem="755-RH-6ka" secondAttribute="trailing" constant="40" id="2Hm-xJ-GGk"/>
+                                    <constraint firstAttribute="height" constant="200" id="D9g-nP-Rir"/>
+                                    <constraint firstAttribute="bottom" secondItem="tAa-yn-WHP" secondAttribute="bottom" constant="15" id="LEj-0s-IOC"/>
+                                    <constraint firstAttribute="trailing" secondItem="Yza-OZ-5hX" secondAttribute="trailing" constant="8" id="W0K-xW-mDq"/>
+                                    <constraint firstItem="tAa-yn-WHP" firstAttribute="leading" secondItem="aID-Ug-E2e" secondAttribute="leading" constant="40" id="WWX-kX-jw4"/>
+                                    <constraint firstAttribute="bottom" secondItem="755-RH-6ka" secondAttribute="bottom" constant="15" id="WvT-I9-QVn"/>
+                                    <constraint firstItem="Yza-OZ-5hX" firstAttribute="leading" secondItem="aID-Ug-E2e" secondAttribute="leading" constant="8" id="moS-ph-PwL"/>
+                                    <constraint firstItem="eUW-Fl-Wgj" firstAttribute="leading" secondItem="aID-Ug-E2e" secondAttribute="leading" constant="8" id="qSu-ba-720"/>
+                                    <constraint firstItem="eUW-Fl-Wgj" firstAttribute="top" secondItem="Yza-OZ-5hX" secondAttribute="bottom" constant="27" id="s4D-MX-Oqz"/>
+                                    <constraint firstAttribute="width" constant="300" id="sYe-hm-5TU"/>
+                                    <constraint firstItem="Yza-OZ-5hX" firstAttribute="top" secondItem="aID-Ug-E2e" secondAttribute="top" constant="17" id="xbf-um-3UT"/>
+                                    <constraint firstAttribute="trailing" secondItem="eUW-Fl-Wgj" secondAttribute="trailing" constant="8" id="zpA-pc-Ejn"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="alertTextLbl" destination="eUW-Fl-Wgj" id="C0k-Fe-fFO"/>
+                                    <outlet property="alertTitleLbl" destination="Yza-OZ-5hX" id="z1D-eM-nyL"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -754,13 +754,29 @@
                                         <color key="textColor" red="0.86666666670000003" green="0.92941176469999998" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpq-n1-a3z">
+                                        <rect key="frame" x="8" y="10" width="60" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="7o3-kO-NPv"/>
+                                            <constraint firstAttribute="width" constant="60" id="OZR-uz-0vc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <state key="normal" title="&lt; voltar">
+                                            <color key="titleColor" red="0.86666666670000003" green="0.92941176469999998" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="3QF-QZ-C55" eventType="touchUpInside" id="wur-gU-Ita"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1333333333" green="0.65490196079999996" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="ixc-YS-Tav" firstAttribute="leading" secondItem="j8l-wR-MQF" secondAttribute="leading" constant="8" id="6ch-KF-r2r"/>
+                                    <constraint firstItem="dpq-n1-a3z" firstAttribute="top" secondItem="j8l-wR-MQF" secondAttribute="top" constant="10" id="FS3-LZ-jgV"/>
                                     <constraint firstAttribute="trailing" secondItem="ixc-YS-Tav" secondAttribute="trailing" constant="8" id="GLu-tw-MqY"/>
                                     <constraint firstAttribute="height" constant="128" id="TTp-WO-vt8"/>
                                     <constraint firstItem="ixc-YS-Tav" firstAttribute="top" secondItem="j8l-wR-MQF" secondAttribute="top" constant="38" id="duH-fr-ZzP"/>
+                                    <constraint firstItem="dpq-n1-a3z" firstAttribute="leading" secondItem="j8l-wR-MQF" secondAttribute="leading" constant="8" id="ugn-ea-oZE"/>
                                 </constraints>
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Número do cartão" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dU0-3r-dWo">
@@ -824,6 +840,9 @@
                             <constraint firstItem="7NG-XD-bt7" firstAttribute="top" secondItem="jor-ty-z5L" secondAttribute="bottom" constant="184" id="xJc-0g-77Z"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="priceLbl" destination="ixc-YS-Tav" id="gKO-vT-vuB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8mX-Zg-DJj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

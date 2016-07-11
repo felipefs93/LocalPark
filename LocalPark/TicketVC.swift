@@ -10,6 +10,7 @@ import UIKit
 
 class TicketVC: UIViewController, CustomAlertDelegate {
     
+    var lastButtonIndex:Int!
     
     @IBOutlet weak var priceLbl: UILabel!
     @IBOutlet weak var durationLbl: UILabel!
@@ -39,7 +40,7 @@ class TicketVC: UIViewController, CustomAlertDelegate {
         parkingNameLbl.text = Factory.singleton.parking.name
         priceLbl.text = "R$ 0.00"
         spaceAndSectorLbl.text = "Vaga X - Setor X"
-        durationLbl.text = ""
+        durationLbl.text = "Duração: 1 dia, 20 horas e 50 minutos."
         let text1 = "1ª Hora ------------------------ R$ 04.00"
         let text2 = "2ª Hora ------------------------ R$ 03.00"
         let text3 = "1ª Diária ---------------------- R$ 22.00"
@@ -64,17 +65,33 @@ class TicketVC: UIViewController, CustomAlertDelegate {
     
     @IBAction func payTicket(sender: AnyObject) {
         alert.setupTitle("Pagar ticket", andText: "Você deseja continuar com o pagamento do ticket?")
+        lastButtonIndex = sender.tag
         alert.show()
     }
     
     
     @IBAction func cancelTicket(sender: AnyObject) {
         alert.setupTitle("Cancelar ticket", andText: "Você deseja continuar com o cancelamento do ticket?")
+        lastButtonIndex = sender.tag
         alert.show()
     }
     
     func buttonOkPressed(){
         print("Clicou Ok")
+        if lastButtonIndex == 0{
+            print("Clicou 0")
+            performSegueWithIdentifier("goToPaymentVCSegue", sender: self)
+            alert.unshow()
+        }else if lastButtonIndex == 1{
+            print("Clicou 0")
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "goToPaymentVCSegue"{
+            let vc = segue.destinationViewController as! PaymentVC
+            vc.priceText = priceLbl.text
+        }
     }
     
     func buttonCancelPressed(){

@@ -9,18 +9,26 @@
 import UIKit
 
 class PaymentVC: UIViewController {
+    
+    var priceText:String!
+    
+    @IBOutlet weak var priceLbl: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        priceLbl.text = priceText
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
     
+    @IBAction func backButtonPressed(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 
 
 }
