@@ -180,6 +180,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Vaga" image="search_btn" id="Wqf-Ib-Fbc"/>
                     <connections>
+                        <outlet property="parkingTitleLbl" destination="LYF-dr-cif" id="brn-IF-E0N"/>
                         <outlet property="sectorsCollectionView" destination="Nqy-zb-Qx4" id="iRL-f1-ap0"/>
                         <segue destination="UWD-0t-ro3" kind="show" identifier="showLots" id="Us9-Bd-L9X"/>
                     </connections>

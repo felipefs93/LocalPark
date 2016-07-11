@@ -37,4 +37,10 @@ class SectorCell: UICollectionViewCell {
         self.layer.borderColor = UIColor.blackColor().CGColor
     }
     
+    func setupCell(name:String, availableSpaces:Int, totalSpaces:Int){
+        sectorName.text = name
+        sectorAvailableParkingLots.text = "Vagas: \(availableSpaces)/\(totalSpaces)"
+    
+    }
+    
 }

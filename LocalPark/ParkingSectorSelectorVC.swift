@@ -13,6 +13,9 @@ class ParkingSectorSelectorVC: UIViewController, UICollectionViewDelegate, UICol
     
     @IBOutlet weak var sectorsCollectionView: UICollectionView!
     
+    
+    @IBOutlet weak var parkingTitleLbl: UILabel!
+    
     let sectors = ["A","B","C","D","E","F","G"]
     let parkingLotsAvailable = ["Vagas: 4/20","Vagas: 4/20","Vagas: 4/20","Vagas: 4/20","Vagas: 4/20","Vagas: 4/20","Vagas: 4/20"]
 
@@ -35,8 +38,7 @@ class ParkingSectorSelectorVC: UIViewController, UICollectionViewDelegate, UICol
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("sectorCell", forIndexPath: indexPath) as! SectorCell
         
-        cell.sectorName.text = self.sectors[indexPath.row]
-        cell.sectorAvailableParkingLots.text = self.parkingLotsAvailable[indexPath.row]
+        cell.setupCell(self.sectors[indexPath.row], availableSpaces: 2, totalSpaces: 10)
         
         return cell
         
