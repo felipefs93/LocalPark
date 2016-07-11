@@ -16,11 +16,16 @@ class ParkingSectorSelectorVC: UIViewController, UICollectionViewDelegate, UICol
     
     @IBOutlet weak var parkingTitleLbl: UILabel!
     
-    let sectors = ["A","B","C","D","E","F","G"]
+//    let sectors = ["A","B","C","D","E","F","G"]
+//    let parkingLotsAvailable = ["Vagas: 4/20","Vagas: 4/20","Vagas: 4/20","Vagas: 4/20","Vagas: 4/20","Vagas: 4/20","Vagas: 4/20"]
+    
+    var sectors:[Sector]!
     let parkingLotsAvailable = ["Vagas: 4/20","Vagas: 4/20","Vagas: 4/20","Vagas: 4/20","Vagas: 4/20","Vagas: 4/20","Vagas: 4/20"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        parkingTitleLbl.text = Factory.singleton.parking.name
+        sectors = ParkingHelper.sharedInstance.getSectorsFromParking(Factory.singleton.parking)
 
         // Do any additional setup after loading the view.
     }
@@ -38,7 +43,11 @@ class ParkingSectorSelectorVC: UIViewController, UICollectionViewDelegate, UICol
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("sectorCell", forIndexPath: indexPath) as! SectorCell
         
-        cell.setupCell(self.sectors[indexPath.row], availableSpaces: 2, totalSpaces: 10)
+        let sector = self.sectors[indexPath.row]
+        let totalSectorSpaces = ParkingHelper.sharedInstance.getNumberOfSpacesInSector(sector)
+        let freeSectorSpaces = ParkingHelper.sharedInstance.getNumberOfFreeSpacesInSector(sector)
+        
+        cell.setupCell(sector.name, availableSpaces: freeSectorSpaces, totalSpaces: totalSectorSpaces)
         
         return cell
         
