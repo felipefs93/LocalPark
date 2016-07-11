@@ -25,6 +25,8 @@ class ParkingLotSelectorVC: UIViewController, UICollectionViewDataSource, UIColl
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        parkingNameLbl.text = Factory.singleton.parking.name
+        
         print(text)
         alert.delegate = self
         alert.unshow()
