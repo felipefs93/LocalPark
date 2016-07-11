@@ -16,9 +16,6 @@ class ParkingLotSelectorVC: UIViewController, UICollectionViewDataSource, UIColl
     
     @IBOutlet weak var alert: CustomAlert!
     
-    let lots = ["1","2","3","4","5","6"]
-    let image = [true,false,false,false,true,false]
-    
     var parkingSpaces:[ParkingSpace]!
     
     
@@ -55,9 +52,11 @@ class ParkingLotSelectorVC: UIViewController, UICollectionViewDataSource, UIColl
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        print("clicou")
-        alert.setupTitle("Confirmar seleção de vaga", andText: "Você confirma a seleção da vaga \(parkingSpaces[indexPath.row].spaceNumber) no setor \(parkingSpaces[indexPath.row].sector.name)?")
-        alert.show()
+        if parkingSpaces[indexPath.row].isSpaceFree(){
+            alert.setupTitle("Confirmar seleção de vaga", andText: "Você confirma a seleção da vaga \(parkingSpaces[indexPath.row].spaceNumber) no setor \(parkingSpaces[indexPath.row].sector.name)?")
+            alert.show()
+            ParkingHelper.sharedInstance.selectSpace(parkingSpaces[indexPath.row])
+        }
     }
     
     func buttonCancelPressed() {
@@ -66,6 +65,7 @@ class ParkingLotSelectorVC: UIViewController, UICollectionViewDataSource, UIColl
     
     func buttonOkPressed() {
         print("selecionou a vaga")
+        ParkingHelper.sharedInstance.parkInSpace()
         alert.unshow()
         let tbc = self.presentingViewController as! UITabBarController
         tbc.selectedIndex = 0

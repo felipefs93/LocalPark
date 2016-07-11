@@ -56,7 +56,7 @@ class Factory{
         _sectors.append(sector)
         sector = Sector(sectorName: "K", sectorParking: _parking)
         
-        var parkingSpace = ParkingSpace(lotNumber: 1, lotFree: true, lotSector: _sectors[0])
+        var parkingSpace = ParkingSpace(lotNumber: 1, lotFree: false, lotSector: _sectors[0])
         _parkingSpaces.append(parkingSpace)
         parkingSpace = ParkingSpace(lotNumber: 2, lotFree: true, lotSector: _sectors[0])
         _parkingSpaces.append(parkingSpace)

@@ -14,6 +14,11 @@ class ParkingHelper{
     var _parkings:[Parking]!
     var _sectors:[Sector]!
     var _parkingSpaces:[ParkingSpace]!
+    var _selectedSpace:ParkingSpace?
+    
+    var selectedSpace:ParkingSpace?{
+        return _selectedSpace
+    }
     
     
     private init(){
@@ -102,6 +107,23 @@ class ParkingHelper{
         }
         
         return nil
+    }
+    
+    func selectSpace(space:ParkingSpace){
+        _selectedSpace = space
+    }
+    
+    func parkInSpace(){
+        if _selectedSpace != nil{
+            _selectedSpace?.setSpaceOccupied()
+        }
+    }
+    
+    func isSpaceSelected()->Bool{
+        if _selectedSpace != nil{
+            return true
+        }
+        return false
     }
     
     func calculateBill(hours:Int, minutes:Int, days:Int, parking:Parking) -> Float{
