@@ -17,9 +17,13 @@ class ParkingHelper{
     
     
     private init(){
+//        _parkings = [Parking]()
+//        _sectors = [Sector]()
+//        _parkingSpaces = [ParkingSpace]()
         _parkings = [Parking]()
-        _sectors = [Sector]()
-        _parkingSpaces = [ParkingSpace]()
+        _parkings.append(Factory.singleton.parking)
+        _sectors = Factory.singleton.sectors
+        _parkingSpaces = Factory.singleton.parkingSpaces
     }
     
     func getNumberOfSpacesInSector(sector:Sector) -> Int{

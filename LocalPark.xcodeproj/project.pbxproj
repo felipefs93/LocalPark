@@ -28,6 +28,7 @@
 		9AD3471C1D3287BB008BD0C0 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3471B1D3287BB008BD0C0 /* Driver.swift */; };
 		9AD3471E1D3287E5008BD0C0 /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3471D1D3287E5008BD0C0 /* CreditCard.swift */; };
 		9AD347401D32F9B3008BD0C0 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3473F1D32F9B3008BD0C0 /* CustomAlert.swift */; };
+		9AD347421D332D3D008BD0C0 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD347411D332D3D008BD0C0 /* Factory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		9AD3471B1D3287BB008BD0C0 /* Driver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
 		9AD3471D1D3287E5008BD0C0 /* CreditCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
 		9AD3473F1D32F9B3008BD0C0 /* CustomAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
+		9AD347411D332D3D008BD0C0 /* Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				9AD347131D328702008BD0C0 /* TicketHelper.swift */,
 				9AD347151D328734008BD0C0 /* ParkingHelper.swift */,
 				9AD347191D328788008BD0C0 /* TimerHelper.swift */,
+				9AD347411D332D3D008BD0C0 /* Factory.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				9AD3471A1D328788008BD0C0 /* TimerHelper.swift in Sources */,
 				9AD347041D31E325008BD0C0 /* ParkingSectorSelectorVC.swift in Sources */,
 				9AD347141D328702008BD0C0 /* TicketHelper.swift in Sources */,
+				9AD347421D332D3D008BD0C0 /* Factory.swift in Sources */,
 				9AD347021D29FD6D008BD0C0 /* TicketVC.swift in Sources */,
 				9AD3470E1D328622008BD0C0 /* Parking.swift in Sources */,
 				9AD347081D31E7E7008BD0C0 /* SectorCell.swift in Sources */,

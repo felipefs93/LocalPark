@@ -19,6 +19,13 @@ class TicketVC: UIViewController, CustomAlertDelegate {
 
         alert.unshow()
         
+        print(Factory.singleton.parking.name)
+        print(Factory.singleton.sectors[0].name)
+        print(Factory.singleton.sectors[0].parking.name)
+        print(ParkingHelper.sharedInstance.getParkingByName("Shopping Iguatemi")!.name)
+    print(ParkingHelper.sharedInstance.getSectorsFromParking(Factory.singleton.parking)[0].name)
+        //print(Factory.singleton.parkingSpaces)
+        
     }
 
     override func didReceiveMemoryWarning() {
