@@ -116,4 +116,58 @@ class Parking{
         return false
     }
     
+    func getPriceTable() -> NSString{
+        if isPricedSecondHour(){
+            return getTableType2()
+        }else if isPricedDaily(){
+            return getTableType3()
+        }else if isDifferentlyPricedDaily(){
+            return getTableType4()
+        }else{
+            return getTableType1()
+        }
+    }
+    
+    
+    //NÃO MOSTRA ESSA DESGRAÇA, PORQUE TÁ FEIO...QUE DIABOS SERIA TYPE1, TYPE2...? NÃO MOSTRA. AINDA TEM REPETIÇÃO DE CÓDIGO
+    func getTableType1() -> NSString{
+    
+        let text1 = "1ª Hora ------------------------ R$ \(_priceFirstHour)0"
+        let text2 = "Hora/Fração -------------------- R$ \(_priceAddedHour)0"
+        let text3 = "Este estacionamento fornece gratuidade pelos primeiros \(_freeMinutes) minutos."
+        let text:NSString = "\(text1)\n\(text2)\n\n\(text3)"
+        return text
+        
+    }
+    
+    func getTableType2() -> NSString{
+        let text1 = "1ª Hora ------------------------ R$ \(_priceFirstHour)0"
+        let text2 = "2ª Hora ------------------------ R$ \(_priceSecondHour)0"
+        let text3 = "Hora/Fração -------------------- R$ \(_priceAddedHour)0"
+        let text4 = "Este estacionamento fornece gratuidade pelos primeiros \(_freeMinutes) minutos."
+        let text:NSString = "\(text1)\n\(text2)\n\(text3)\n\n\(text4)"
+        return text
+    }
+    
+    func getTableType3() -> NSString{
+        let text1 = "1ª Hora ------------------------ R$ \(_priceFirstHour)0"
+        let text2 = "2ª Hora ------------------------ R$ \(_priceSecondHour)0"
+        let text3 = "Hora/Fração -------------------- R$ \(_priceAddedHour)0"
+        let text4 = "1ª Diária ---------------------- R$ \(_priceFirstDaily)0"
+        let text5 = "Este estacionamento fornece gratuidade pelos primeiros \(_freeMinutes) minutos."
+        let text:NSString = "\(text1)\n\(text2)\n\(text3)\n\(text4)\n\n\(text5)"
+        return text
+    }
+    
+    func getTableType4() -> NSString{
+        let text1 = "1ª Hora ------------------------ R$ \(_priceFirstHour)0"
+        let text2 = "2ª Hora ------------------------ R$ \(_priceSecondHour)0"
+        let text3 = "Hora/Fração -------------------- R$ \(_priceAddedHour)0"
+        let text4 = "1ª Diária ---------------------- R$ \(_priceFirstDaily)0"
+        let text5 = "Demais Diárias ----------------- R$ \(_priceAddedDaily)0"
+        let text6 = "Este estacionamento fornece gratuidade pelos primeiros \(_freeMinutes) minutos."
+        let text:NSString = "\(text1)\n\(text2)\n\(text3)\n\(text4)\n\(text5)\n\n\(text6)"
+        return text
+    }
+    
 }

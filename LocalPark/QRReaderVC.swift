@@ -9,6 +9,8 @@
 import UIKit
 import AVFoundation
 
+var gambiarraGlobal:String!
+
 class QRReaderVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 
     var captureSession:AVCaptureSession?
@@ -37,6 +39,7 @@ class QRReaderVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
             print("\(error.localizedDescription)")
             return
         }
+        
         
         // Initialize a AVCaptureMetadataOutput object and set it as the output device to the capture session.
         let captureMetadataOutput = AVCaptureMetadataOutput()
@@ -67,11 +70,17 @@ class QRReaderVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         
     }
     
+    override func viewWillAppear(animated: Bool) {
+        captureSession?.startRunning()
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "toMainVCSegue"{
             
             let tabBarController = segue.destinationViewController as! UITabBarController;
-            let destinationViewController = tabBarController.viewControllers![0] as! TicketVC
+            tabBarController.selectedIndex = 1
+            let destinationViewController = tabBarController.viewControllers![1] as! ParkingSectorSelectorVC
+
         }
     }
     
@@ -100,7 +109,9 @@ class QRReaderVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
             
             if metadataObj.stringValue != nil {
                 captureSession?.stopRunning()
-                messageLabel.text = metadataObj.stringValue
+                //messageLabel.text = metadataObj.stringValue
+                gambiarraGlobal = metadataObj.stringValue
+                
                 performSegueWithIdentifier("toMainVCSegue", sender: metadataObj.stringValue)
             }
         }

@@ -26,35 +26,64 @@ class TicketVC: UIViewController, CustomAlertDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(gambiarraGlobal)
         alert.delegate = self
 
         alert.unshow()
         
-        print(Factory.singleton.parking.name)
-        print(Factory.singleton.sectors[0].name)
-        print(Factory.singleton.sectors[0].parking.name)
-        print(ParkingHelper.sharedInstance.getParkingByName("Shopping Iguatemi")!.name)
-    print(ParkingHelper.sharedInstance.getSectorsFromParking(Factory.singleton.parking)[0].name)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.loadMainView), name: UIApplicationDidBecomeActiveNotification, object: nil)
         
+        
+        loadMainView()
+        
+        _ = NSTimer.scheduledTimerWithTimeInterval(60.0, target: self, selector: #selector(self.update), userInfo: nil, repeats: true)
+        
+        print(Factory.singleton.ticket.enteredTime)
+        print(Factory.singleton.ticket.durationTime)
+        
+    }
+    
+    
+    
+    func update() {
+        print(Factory.singleton.ticket.enteredTime)
+        print(Factory.singleton.ticket.durationTime)
+        
+        let result = TimerHelper.sharedInstance.convertSecondsToDaysHoursAndMinutes(Factory.singleton.ticket.durationTimeInSeconds)
+        
+        priceLbl.text = "R$ \(ParkingHelper.sharedInstance.calculateBill(result["hours"]!, minutes: result["minutes"]!, days: result["days"]!, parking: Factory.singleton.parking))0"
+        
+    }
+    
+    
+    override func viewWillAppear(animated: Bool) {
+        loadMainView()
+    }
+    
+    func loadMainView(){
         //ESTA MERDA ESTÁ PERDENDO A FORMATAÇÃO
         parkingNameLbl.text = Factory.singleton.parking.name
         priceLbl.text = "R$ 0.00"
-        spaceAndSectorLbl.text = "Vaga X - Setor X"
-        durationLbl.text = "Duração: 1 dia, 20 horas e 50 minutos."
-        let text1 = "1ª Hora ------------------------ R$ 04.00"
-        let text2 = "2ª Hora ------------------------ R$ 03.00"
-        let text3 = "1ª Diária ---------------------- R$ 22.00"
-        let text4 = "2ª Diária ---------------------- R$ 12.00"
-        let text5 = "Hora/Fração -------------------- R$ 02.00"
-        let text6 = "Diária Extra ------------------- R$ 22.00"
-        let text:NSString = "\(text1)\n\(text2)\n\(text3)\n\(text4)\n\(text5)\n\(text6)"
-        parkingPriceTableTextView.text = text as String
+        
+        if let vaga = ParkingHelper.sharedInstance.selectedSpace{
+            spaceAndSectorLbl.text = "Vaga \(vaga.spaceNumber) - Setor \(vaga.sector.name)"
+        }else{
+            spaceAndSectorLbl.text = "Vaga X - Setor X"
+        }
+        
+        
+        
+        durationLbl.text = "Entrada: \(Factory.singleton.ticket.enteredTime)"
+        parkingPriceTableTextView.text = Factory.singleton.parking.getPriceTable() as String
         
         parkingPriceTableTextView.textColor = UIColor(red: 221/255, green: 237/255, blue: 253/255, alpha: 1.0)
         parkingPriceTableTextView.textAlignment = .Center
         parkingPriceTableTextView.font = UIFont(name: "HelveticaNeue", size: 16)
         
+        let result = TimerHelper.sharedInstance.convertSecondsToDaysHoursAndMinutes(Factory.singleton.ticket.durationTimeInSeconds)
         
+        priceLbl.text = "R$ \(ParkingHelper.sharedInstance.calculateBill(result["hours"]!, minutes: result["minutes"]!, days: result["days"]!, parking: Factory.singleton.parking))0"
     }
 
     override func didReceiveMemoryWarning() {
@@ -84,6 +113,7 @@ class TicketVC: UIViewController, CustomAlertDelegate {
             alert.unshow()
         }else if lastButtonIndex == 1{
             print("Clicou 0")
+            ParkingHelper.sharedInstance._selectedSpace?.setSpaceFree()
             alert.unshow()
             self.dismissViewControllerAnimated(true, completion: nil)
         }

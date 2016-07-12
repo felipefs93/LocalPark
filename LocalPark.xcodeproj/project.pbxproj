@@ -30,6 +30,7 @@
 		9AD347401D32F9B3008BD0C0 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD3473F1D32F9B3008BD0C0 /* CustomAlert.swift */; };
 		9AD347421D332D3D008BD0C0 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD347411D332D3D008BD0C0 /* Factory.swift */; };
 		9AD347441D335166008BD0C0 /* PaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD347431D335166008BD0C0 /* PaymentVC.swift */; };
+		9AD347461D3485BE008BD0C0 /* PaymentAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD347451D3485BE008BD0C0 /* PaymentAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		9AD3473F1D32F9B3008BD0C0 /* CustomAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 		9AD347411D332D3D008BD0C0 /* Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		9AD347431D335166008BD0C0 /* PaymentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentVC.swift; sourceTree = "<group>"; };
+		9AD347451D3485BE008BD0C0 /* PaymentAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentAlert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				9AD347091D31E7FD008BD0C0 /* ParkingLotCell.swift */,
 				9AD3470B1D31F5DA008BD0C0 /* CustomButton.swift */,
 				9AD3473F1D32F9B3008BD0C0 /* CustomAlert.swift */,
+				9AD347451D3485BE008BD0C0 /* PaymentAlert.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			files = (
 				9AD347121D3286D2008BD0C0 /* Ticket.swift in Sources */,
 				9AD347181D328769008BD0C0 /* ParkingSpace.swift in Sources */,
+				9AD347461D3485BE008BD0C0 /* PaymentAlert.swift in Sources */,
 				9AD346EE1D29F45D008BD0C0 /* QRReaderVC.swift in Sources */,
 				9AD347401D32F9B3008BD0C0 /* CustomAlert.swift in Sources */,
 				9AD3471C1D3287BB008BD0C0 /* Driver.swift in Sources */,
@@ -354,6 +358,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LocalPark/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.felipe.soares.LocalPark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -365,6 +370,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LocalPark/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.felipe.soares.LocalPark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
